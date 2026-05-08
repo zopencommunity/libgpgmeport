@@ -4,12 +4,13 @@ LIBGPGME_VERSION="2.0.1" # Specify a stable release
 #export ZOPEN_STABLE_TAG="gpgme-${LIBGPGME_VERSION}"
 export ZOPEN_STABLE_URL="https://gnupg.org/ftp/gcrypt/gpgme/gpgme-${LIBGPGME_VERSION}.tar.bz2"
 export ZOPEN_DEV_URL="https://github.com/gpg/gpgme.git"
-export ZOPEN_STABLE_DEPS="make bzip2 tar curl perl automake autoconf m4 sed gettext zoslib diffutils libgpgerror npth libgcrypt libksba libassuan texinfo pinentry ncurses ntbtls zlib zip git gpg gnulib getopt libtool which"
-export ZOPEN_DEV_DEPS="make bzip2 tar curl perl automake autoconf m4 sed gettext zoslib diffutils libgpgerror npth libgcrypt libksba libassuan texinfo pinentry ncurses ntbtls zlib zip git gpg gnulib getopt libtool"
+export ZOPEN_STABLE_DEPS="make sed diffutils libgpgerror libassuan gpg which"
+export ZOPEN_DEV_DEPS="make bzip2 tar curl perl automake autoconf m4 sed zoslib diffutils libgpgerror libassuan texinfo gpg git libtool which"
 export ZOPEN_BUILD_LINE="STABLE"
 export ZOPEN_CATEGORIES="development"
 export ZOPEN_COMP=CLANG
-export ZOPEN_BOOTSTRAP="./autogen.sh"
+export USE_CLANG_WRAPPER=1
+# export ZOPEN_BOOTSTRAP="./autogen.sh"
 
 zopen_check_results()
 {

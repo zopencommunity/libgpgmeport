@@ -1,0 +1,14 @@
+diff --git a/src/posix-io.c b/src/posix-io.c
+index aa69bfc..f71e374 100644
+--- a/src/posix-io.c
++++ b/src/posix-io.c
+@@ -56,6 +56,9 @@
+ 
+ #ifdef HAVE_POLL_H
+ # include <poll.h>
++# if defined (__MVS__) && defined (HAVE_SYS_TIME_H)
++#  include <sys/time.h>
++# endif
+ #else
+ # ifdef HAVE_SYS_SELECT_H
+ #  include <sys/select.h>
