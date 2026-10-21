@@ -10,6 +10,8 @@ export ZOPEN_BUILD_LINE="STABLE"
 export ZOPEN_CATEGORIES="development"
 export ZOPEN_COMP=CLANG
 export USE_CLANG_WRAPPER=1
+export ZOPEN_BUILDTIME_DEPS="libgpgerror libassuan"
+
 # export ZOPEN_BOOTSTRAP="./autogen.sh"
 
 zopen_check_results()
